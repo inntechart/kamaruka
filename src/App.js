@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 // components
 import Header from './components/header';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
+import Loading from './components/Loading';
 
 
 // provider
@@ -45,12 +46,17 @@ import Policy from './pages/approach/policy';
 
 
 function App() {
+    const [isShowLoading, setIsShowLoading] = useState(true);
+
+    setTimeout(() => {
+        setIsShowLoading(false);
+    }, 2500)
+
     return (
         <Router>
             <SubmenuContentProvider>
                 <MobileMenuProvider>
                     <DonateProvider>
-
                         <div className="App">
                             <Header />
                             <Navigation />
@@ -120,6 +126,7 @@ function App() {
                                 </Route>
                             </Switch>
                             <Footer />
+                            {isShowLoading && <Loading/>}
                         </div>
                     </DonateProvider>
                 </MobileMenuProvider>
