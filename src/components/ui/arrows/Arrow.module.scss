@@ -1,0 +1,57 @@
+@import "./src/styles/variables";
+
+.arrows {
+  position: absolute;
+  //right: -7%;
+  right: calc(50% - 22px);
+  //bottom: 0;
+  bottom: -100px;
+  cursor: pointer;
+
+  & > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & > a > span {
+    font-size: 11px;
+  }
+
+  & > a > span:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid $blackColor;
+    margin-bottom: 15px;
+
+    > img {
+      width: 50%;
+    }
+  }
+}
+
+.tr {
+  right: 50% !important;
+  transform: translateX(50%) !important;
+}
+
+@media only screen and (max-width: 1150px) {
+  .arrows {
+    right: calc(50% - 22px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .arrows {
+    & > a > span:first-child {
+      width: 26px;
+      height: 26px;
+      margin-bottom: 10px;
+    }
+    right: calc(50% - 13px);
+    bottom: -90px;
+  }
+}

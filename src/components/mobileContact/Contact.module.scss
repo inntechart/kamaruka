@@ -1,0 +1,108 @@
+@import './src/styles/variables';
+
+.contact {
+  position: relative;
+  &__search {
+    background-color: #ACA9A0;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_inp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 95%;
+      margin: 0 auto;
+      & > input {
+        border: 1px solid $blackColor;
+        border-radius: 3px;
+        background-color: transparent;
+        padding: 10px;
+        width: 100%;
+      }
+      & > img {
+        position: absolute;
+        right: 30px;
+      }
+    }
+  }
+  &_heading {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: $fontMedium;
+  }
+}
+
+.numbers {
+  margin: 20px 0;
+  &_heading {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  &__items {
+
+    &_item {
+      margin-bottom: 10px;
+      display: flex;
+      font-size: 14px;
+      &:first-child {
+        & > p:last-child {
+          margin-left: 43px;
+        }
+      }
+      & > p:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.addresses {
+  &_heading {
+    margin-bottom: 10px;
+    font-weight: 400px;
+  }
+  &__address {
+    &_heading {
+      font-size: 14px;
+      font-weight: $fontRegular;
+    }
+    & > address {
+      font-weight: lighter;
+      font-size: 13px;
+      margin: 10px 0;
+      & > span {
+        display: block;
+        margin: 3px 0;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.enquiry {
+  margin: 20px 0;
+  &_heading {
+    margin-bottom: 10px;
+  }
+  &_link {
+    font-size: 14px;
+    color: $primaryColor;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .contact {
+    &__search {
+      &_inp {
+        & > img {
+          right: 40px;
+        }
+      }
+    }
+  }
+}

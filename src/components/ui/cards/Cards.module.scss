@@ -1,0 +1,129 @@
+@import './src/styles/variables';
+
+.cards {
+  position: relative;
+}
+
+.card {
+  padding: 15px;
+  border-radius: 3px;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  &__start {
+    display: flex;
+
+    &_start {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      & > span {
+        font-size: 11px;
+      }
+
+      & > p {
+        font-size: 13px;
+        font-weight: $fontMedium;
+      }
+    }
+  }
+
+  &__cube {
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: $blackColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+    & > span {
+      display: block;
+      font-size: 34px;
+      font-weight: $fontBold;
+    }
+  }
+
+  &__term {
+    align-self: flex-end;
+    font-size: 15px;
+    font-weight: $fontBlack;
+    @media only screen and (max-width: 992px) {
+      align-self: center;
+    }
+  }
+
+  &_wrap__infos {
+  }
+
+  &__infos {
+    border-top: 1px solid #6C6C6C;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px 10px 5px;
+
+    & > div {
+      width: 40%;
+    }
+
+    & h5 {
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: $fontBlack;
+    }
+
+    & h6 {
+      margin-bottom: 5px;
+      font-size: 11px;
+      font-weight: $fontBlack;
+    }
+
+    & p {
+      font-size: 11px;
+    }
+
+    & p:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .card_wrap__infos {
+    display: none;
+  }
+  .card__wrap__infos_open {
+    display: block;
+  }
+
+  .card {
+    &__infos {
+      border: none;
+    }
+    &__info {
+      flex-direction: column;
+      padding: 0;
+      & > div {
+        width: 100%;
+        border-top: 1px solid #6C6C6C;
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

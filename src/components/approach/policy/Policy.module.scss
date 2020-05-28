@@ -1,0 +1,48 @@
+@import './src/styles/variables';
+
+.enquiry {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  @media only screen and (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__content {
+    width: 66.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media only screen and (max-width: 992px) {
+      width: 100%;
+    }
+    &_heading {
+      font-size: 27px;
+      color: $blackColor;
+      font-weight: $fontBold;
+      margin-bottom: 20px;
+    }
+  }
+  &__texts {
+    max-width: 95%;
+    & > p, ul {
+      margin: 15px 0;
+      line-height: 1.2;
+    }
+  }
+  & > aside {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (max-width: 992px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    & > div > div {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+}
+

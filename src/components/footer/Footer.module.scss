@@ -1,0 +1,118 @@
+@import './src/styles/variables';
+
+.footer {
+  &__top {
+    background-color: $greyColor;
+  }
+
+  &__lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_list {
+      margin: 0 25px;
+      text-transform: capitalize;
+      padding: 10px 0;
+      font-size: 16px;
+    }
+  }
+
+  &__content {
+    background-color: $blackColor;
+    color: #9B9B9B;
+    padding: 20px 0;
+  }
+
+  &_copyright {
+    text-align: center;
+    font-size: 13px;
+    & p {
+      line-height: 1.2;
+    }
+    & br {
+      display: none;
+    }
+    @media only screen and (max-width: 992px) {
+      max-width: 90%;
+      margin: 0 auto;
+      & span:first-child {
+        display: none;
+      }
+      & span:last-child {
+        display: block;
+        margin-top: 20px;
+      }
+      & br {
+        display: block;
+      }
+    }
+
+    & > p:last-child {
+      color: $witheColor;
+      margin-top: 15px;
+      margin-bottom: 60px;
+      @media only screen and (max-width: 992px) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &_corp {
+    text-align: center;
+    font-size: 14px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    > p {
+      padding-top: 10px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $greyColor;
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .footer {
+    &_corp {
+      max-width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .footer {
+    &__lists {
+      &_list {
+        margin: 0 25px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 430px) {
+  .footer {
+    &__lists {
+      &_list {
+        margin: 0 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer {
+    &__lists {
+      &_list {
+        margin: 0 6px;
+        font-size: 11px;
+      }
+    }
+  }
+}

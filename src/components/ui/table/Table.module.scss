@@ -1,0 +1,24 @@
+.table {
+  width: 80%;
+  margin: 0 auto 100px;
+  &_table {
+    width: 100%;
+    tbody {
+      width: 100%;
+    }
+    th:first-child {
+      text-align: left;
+    }
+    th {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #000;
+    }
+    td {
+      padding: 5px 15px 5px 0;
+    }
+  }
+
+  &_right {
+    text-align: center;
+  }
+}

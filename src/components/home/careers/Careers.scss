@@ -1,0 +1,19 @@
+.careers {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: minmax(300px, 1fr);
+  grid-template-columns: 1fr 326.5px;
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 1020px) {
+  .careers {
+    grid-template-columns: 2fr 0.98fr;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .careers {
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(1, minmax(30%, 1fr));
+  }
+}

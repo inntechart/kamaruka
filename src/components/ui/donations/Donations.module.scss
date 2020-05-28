@@ -1,0 +1,130 @@
+@import './src/styles/variables';
+
+.donations {
+  border: 1px solid #000;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 0 !important;
+  position: relative;
+  height: 100%;
+  min-height: 490px;
+  max-height: 1240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &_more {
+    display: block;
+    //margin-top: -30px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    cursor: pointer;
+    @media screen and (max-width: 992px) {
+      margin-top: 10px;
+    }
+  }
+
+  &_heading {
+    font-size: 30px;
+    font-weight: $fontMedium;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__texts {
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & > p {
+      margin: 30px 0;
+      font-size: 22px;
+      font-weight: $fontMedium;
+      color: $greenColor;
+    }
+  }
+
+  &__money {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    height: 70%;
+    bottom: 90px;
+    @media screen and (max-width: 992px){
+      height: 60%;
+    }
+    &_lines {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      margin-right: 5px;
+      position: relative;
+      & > span {
+        position: absolute;
+        font-size: 12px;
+        font-weight: 500;
+        left: -30px;
+      }
+      & > span:last-child {
+        top: -20px;
+        left: 23px;
+      }
+      & > span:nth-child(1) {
+        top: 80%;
+        left: -25px;
+      }
+      & > span:nth-child(2) {
+        top: 60%;
+      }
+      & > span:nth-child(3) {
+         top: 41%;
+       }
+      & > span:nth-child(4) {
+        top: 20%;
+      }
+      & > span:nth-child(5) {
+        top: 0;
+      }
+    }
+
+    &_line {
+      font-size: 12px;
+      text-align: right;
+      width: 10px;
+      height: 1px;
+      background-color: #000;
+    }
+
+    &_colb {
+      height: 100%;
+      width: 25px;
+      border: 1px solid #000;
+      display: flex;
+      flex-direction: column-reverse;
+
+      &_inner {
+        height: 5%;
+        width: 90%;
+        margin: 0 auto;
+        background-color: red;
+      }
+    }
+  }
+}
+
+.open {
+  height: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .donations {
+    & > div:last-child {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}

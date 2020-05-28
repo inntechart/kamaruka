@@ -1,0 +1,28 @@
+@import './src/styles/variables';
+
+.square {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $witheColor;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  > h3 {
+    font-size: 30px;
+    max-width: 70%;
+    line-height: 1.2;
+    @media only screen and (max-width: 768px) {
+      font-size: 23px;
+    }
+  }
+
+  > p {
+    font-size: 22px;
+  }
+}
+
+

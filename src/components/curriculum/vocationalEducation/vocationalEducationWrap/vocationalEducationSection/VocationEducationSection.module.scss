@@ -1,0 +1,17 @@
+@media only screen and (max-width: 768px) {
+  .content {
+    position: relative;
+    & p {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    &__hidden {
+      overflow: hidden;
+      display: none;
+    }
+
+    &__show {
+      display: block;
+    }
+  }
+}
